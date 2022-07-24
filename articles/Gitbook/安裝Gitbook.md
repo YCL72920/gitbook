@@ -6,15 +6,65 @@
 + https://nodejs.org/en/
 
 ### nvm(主要用來將NodeJS降版本)
-+ https://github.com/coreybutler/nvm-windows/releases
-<img src="../images/安裝Gitbook.assets/image-20220721012312475.png" alt="image-20220721012312475" style="zoom: 80%;" />
++ MacOS
+   https://github.com/nvm-sh/nvm#troubleshooting-on-macos
+
+  ````shell
+  #安裝
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  
+  #安裝完畢後關掉命令視窗，重新開啟後輸入以下指令，檢查是否安裝完畢（會出現nvm)
+  command -v nvm
+  
+  #查看目前安裝的nodeJS版本
+  nvm ls
+  
+  #查看可安裝的nodeJS版本
+  nvm ls-remote
+  
+  #安裝指定的nodeJS版本
+  nvm install 版本號碼
+  
+  #切換為指定的nodeJS版本
+  nvm use 版本號碼
+  ````
+
++ Windows
+  https://github.com/coreybutler/nvm-windows/releases
+  <img src="../images/安裝Gitbook.assets/image-20220721012312475.png" alt="image-20220721012312475" style="zoom: 80%;" />
 
 ### Gitbook(需先安裝完NodeJS)
 + 透過npm指令安裝
-  ```
+  ```shell
+  #macOS
+  sudo npm install gitbook-cli -g
+  
+  #windows(要以管理者身份開啟命令提示字元)
   npm install gitbook-cli -g
   ```
-
+  
+  + 如果macOS安裝時出現錯誤，可以先下`gitbook -V`，藉自動安裝時看詳細install錯誤
+    有可能是nodeJS版本過高，此可置換版本為v10.22.0
+  
+  ![image-20220724150851603](/Users/ycl/git_src/gitbook/articles/images/安裝Gitbook.assets/image-20220724150851603.png)
+  
+  ```shell
+  #安裝舊版本的nodeJS
+  nvm install v10.22.0
+  
+  #查看目前已安裝好的可用版本
+  nvm ls
+  
+  #切換到舊版本的nodeJS
+  nvm use v10.22.0
+  
+  #安裝gitbook
+  sudo npm install gitbook-cli -g
+  
+  #檢查安裝好的gitbook版本
+  gitbook -V
+  ```
+  
   
   
 + 安裝完畢後檢查版本
@@ -128,8 +178,6 @@
   ```
 
   ![image-20220721032619685](../images/安裝Gitbook.assets/image-20220721032619685.png)
-
-  
 
 
 

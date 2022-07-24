@@ -27,8 +27,11 @@
   
   #切換為指定的nodeJS版本
   nvm use 版本號碼
-  ````
-
+  
+   #設定nodeJS預設版本
+   nvm alias default 版本號碼
+   ````
+   
 + Windows
   https://github.com/coreybutler/nvm-windows/releases
   <img src="../images/安裝Gitbook.assets/image-20220721012312475.png" alt="image-20220721012312475" style="zoom: 80%;" />
@@ -92,6 +95,13 @@
 + 挑個好地方建立Gitbook資料夾
   ![image-20220721012744001](../images/安裝Gitbook.assets/image-20220721012744001.png)
 
++ 先執行以下語法，以使用gitbook指令產生SUMMARY.md
+  ```shell
+  sudo npm install -g gitbook-summary
+  ```
+  
+  
+  
 + 切到該資料夾，並執行指令
   
   ```

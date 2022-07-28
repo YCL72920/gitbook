@@ -1,0 +1,13 @@
+# 環境設定_macOS
+
+## 透過brew安裝openJDK
+
+```shell
+brew install openjdk@11 #可以把最後兩碼的11改成想要的版本號
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"' ＃因為brew的keg-only機制, 所以手動連結
+java -version #安裝完畢後查看java版本
+
+brew uninstall openjdk@11 #可指定要刪除的檔案名稱(此句為刪除openjdk11)
+```
+
++ 
